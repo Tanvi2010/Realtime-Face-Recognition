@@ -18,9 +18,8 @@ function gotResult(error,results) {
     }
 else {
     console.log(results);
-    
+   document.getElementById("result_person_name").innerHTML=results[0].label;
+    document.getElementById("result_person_accuracy").innerHTML=results[0].confidence.toFixed(2); 
 
-}
-    document.getElementById("result_person_name").innerHTML=results[0].label;
-    document.getElementById("result_person_accuracy").innerHTML=results[0].confidence.toFixed(2);
+}    
 }
